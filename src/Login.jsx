@@ -27,7 +27,7 @@ const Login = ({ onLoginSuccess }) => {
     };
     getResult();
   }, [onLoginSuccess]);
-
+  console.log(onLoginSuccess);
   return (
     <div className="container mt-5">
       <h2 className="text-center mb-4">Iniciar Sesión</h2>
