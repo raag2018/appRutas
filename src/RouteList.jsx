@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { db, collection, getDocs } from './firebaseConfig';
 import DataTable from 'react-data-table-component';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const RouteList = () => {
   const [routes, setRoutes] = useState([]);
@@ -30,16 +31,22 @@ const RouteList = () => {
   }, []);
 
   const columns = [
-    {
+    /*{
       name: 'ID',
       selector: row => row.id,
       sortable: true
-    },
+    },*/
     {
       name: 'Nombre',
       selector: row => row.name,
       sortable: true
     },
+    {
+      name: 'Direccion',
+      selector: row => row.direccion,
+      sortable: true
+    },
+    /*
     {
       name: 'Longitud',
       selector: row => row.longitude,
@@ -59,7 +66,7 @@ const RouteList = () => {
       name: 'Departamento',
       selector: row => row.department,
       sortable: true
-    }
+    }*/
   ];
 
   return (
